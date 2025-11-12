@@ -1,0 +1,32 @@
+# ----------------------------------------------------
+# 红外相机风格迁移项目 - 配置文件
+# ----------------------------------------------------
+
+# --- 1. 路径设置 (相对于项目根目录) ---
+paths:
+  # 用于分析的原始红外图像目录
+  raw_images_dir: "data/raw_images"
+  # 待添加风格的干净图像目录
+  clean_images_dir: "data/clean_images"
+  # 所有输出文件的根目录
+  output_dir: "output"
+  # (可选) 输出指纹图的子目录名
+  fingerprint_subdir: "camera_fingerprint"
+  # (可选) 输出风格化图像的子目录名
+  stylized_subdir: "stylized_images"
+
+# --- 2. 特征提取器 (Analyzer) 参数 ---
+analyzer:
+  # 分析时，所有图像将被统一到的分辨率 [宽度, 高度]
+  # 较大的分辨率能保留更多细节，但会增加内存消耗和计算时间
+  process_resolution: [640, 480]
+
+  # 用于分离高低频的高斯模糊核大小 [宽度, 高度]
+  # 必须是大的奇数。这个值越大，分离出的渐晕图就越平滑。
+  gaussian_blur_kernel: [99, 99]
+
+# --- 3. 风格应用器 (Applicator) 参数 ---
+applicator:
+  # 添加到图像上的噪声强度系数
+  # 0.0 表示不添加噪声，1.0 表示较强的噪声。可以根据视觉效果微调。
+  noise_alpha: 2.0
