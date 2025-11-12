@@ -1,3 +1,6 @@
+__pycache__
+.pyc
+
 data/clean_images/
 data/raw_images/
 output/camera_fingerprint/

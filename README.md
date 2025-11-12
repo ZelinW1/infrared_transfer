@@ -4,6 +4,10 @@ This is a simple tool built with Python and OpenCV to extract the unique sensor 
 
 The project is based on a straightforward and effective statistical method: averaging a large number of images to cancel out scene-specific content, thereby isolating the inherent, unchanging patterns of the sensor.
 
+**Read this in other languages:**
+- [English](README.md)
+- [简体中文](README.zh-CN.md)
+
 ## ✨ Features
 
 - **Fingerprint Extraction**: Automatically analyzes all images in a specified directory to extract the camera's vignetting map (low-frequency) and noise map (high-frequency).
